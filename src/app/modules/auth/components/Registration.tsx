@@ -10,6 +10,8 @@ import { useAuth } from "../core/Auth";
 import { Form, Button, ProgressBar } from "react-bootstrap";
 import "./registration.scss";
 import Steps from "./Steps";
+import user from "./../../../assets/users.svg";
+import education from "./../../../assets/education.svg";
 
 const initialValues = {
   firstname: "",
@@ -107,9 +109,56 @@ export function Registration() {
       <div className="d-flex justify-content-center align-items-center w-70 registration_wrapper">
         <Form className="registration_form" onSubmit={handleSubmit}>
           {step === 1 && (
-            <div className="dkkd">
-              <button className="registration_button"></button>
+            <div className="buttons_wrapper">
+              <div className="button">
+                <input type="radio" id="a25" name="check-substitution-2" />
+                <label className="btn btn-default" for="a25">
+                  <div className="registration_button_wrapper">
+                    <div>
+                      <img src={user} />
+                    </div>
+                    <div className="registration_button_text">
+                      {" "}
+                      <div className="registration_button_title">Creator</div>
+                      <div className="registration_button_subtitle">
+                        Sign-up as a creator
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div className="button">
+                <input type="radio" id="a25" name="check-substitution-2" />
+                <label className="btn btn-default" for="a25">
+                  <div className="registration_button_wrapper">
+                    <div>
+                      <img src={education} />
+                    </div>
+                    <div className="registration_button_text">
+                      {" "}
+                      <div className="registration_button_title">Agency</div>
+                      <div className="registration_button_subtitle">
+                        Sign-up as agency
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
             </div>
+            // <div className="registration_button_block">
+            //   <button className="registration_button">
+            //     <div className="registration_button_wrapper">
+            //       <div>
+            //         <img src={user} />
+            //       </div>
+            //       <div className="registration_button_text">
+            //         {" "}
+            //         <div>Creator</div>
+            //         <div>Sign-up as a creator</div>
+            //       </div>
+            //     </div>
+            //   </button>
+            // </div>
           )}
           {step === 2 && (
             <Form.Group controlId="formStep2">
@@ -405,15 +454,19 @@ export function Registration() {
               {/* Ваші поля для кроку 3 */}
             </Form.Group>
           )}
-          <div className="d-flex justify-content-between">
-            {step > 1 && (
+          <div className="d-flex justify-content-between registration_continue_button">
+            {/* {step > 1 && (
               <Button variant="secondary" onClick={handlePrevious}>
                 <>Back</>
               </Button>
-            )}
+            )} */}
             {step < 3 ? (
-              <Button variant="primary" onClick={handleNext}>
-                Next
+              <Button
+                className={step > 1 ? "buttonfull w-100" : ""}
+                variant="primary"
+                onClick={handleNext}
+              >
+                Continue
               </Button>
             ) : (
               <Button variant="primary" type="submit">

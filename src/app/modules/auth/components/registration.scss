@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 .registration {
     display: flex;
@@ -12,8 +13,89 @@
         justify-content: center;
         align-items: center;
     }
+
+    &_continue_button {
+      margin-left: 77%;
+      margin-top: 20px;
+    }
+
+
+    & .buttonfull {
+      width: 100% !important;
+    }
+    .buttons_wrapper {
+      display: flex;
+    }
+
+    .button {
+      display: flex;
+      position: relative;
+      margin: 0 5px 0 0;
+      width: 240px;
+      height: 85px;
+      border: 1px dashed #2884EF;
+      border-radius: 8px;
+      padding: 20px;
+      cursor: pointer;
+
+    }
+    
+    .button label,
+    .button input {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    .button input[type="radio"] {
+      opacity: 0.011;
+      z-index: 100;
+    }
+    
+    .button input[type="radio"]:checked + label {
+      background: #20b8be;
+      border-radius: 4px;
+    }
+    
+    .button label {
+      cursor: pointer;
+      z-index: 90;
+      line-height: 1.8em;
+    }
+    
     &_button {
       border: 1px dashed #2884EF;
+      background-color: #FFFFFF;
       padding: 20px;
+      border-radius: 8px;
+
+      &_block {
+        :hover {
+          background-color: #82b0e6;
+        }
+      }
+      &_wrapper { 
+        display: flex;
+        align-items: center;
+      }
+      &_text { 
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 10px;
+      }
+
+      &_title {
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      &_subtitle {
+        font-size: 12px;
+        color: #7E8299;
+      }
     }
 }
