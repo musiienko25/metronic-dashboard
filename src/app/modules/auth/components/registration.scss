@@ -1,5 +1,19 @@
-.green {
-    color: green;
-    font-size: 18px;
-    font-weight: bold;
+
+
+.registration {
+    display: flex;
+    height: -webkit-fill-available;
+    &_wrapper {
+        width: 70%;
+    }
+    &_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &_button {
+      border: 1px dashed #2884EF;
+      padding: 20px;
+    }
 }

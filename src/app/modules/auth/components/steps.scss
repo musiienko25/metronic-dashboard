@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+
+.steps_block:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 1px;
+  height: calc(100% + 10px);
+  background-color: #FFFFFF; 
+  transform: translateX(-50%);
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  &_block {
+    margin-bottom: 50px;
+    position: relative;
+  }
+  &_logo {
+    margin-bottom: 80px;
+  }
+  &_number {
+    border: 1px solid white;
+    padding: 0px 15px;
+    border-radius: 9px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    &_text { 
+      margin-left: 10px;
+    }
+    &_wrapper {
+      color: white;
+      display: flex;
+    }
+    &_description {
+      font-size: 13px;
+    }
+    &_title {
+      font-size: 17px;
+      line-height: 19px;
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+    }
+  }
+
+  .green {
+    .steps_number {
+      background-color: #50CD89;
+      border: 1px solid #50CD89;
+      font-size: 18px;
+      display: flex;
+    }
+}
+}
