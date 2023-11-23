@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { KTIcon, toAbsoluteUrl } from "../../../helpers";
 import { Dropdown1 } from "../..";
+import clsx from "clsx";
 
 type Props = {
   className: string;
@@ -9,16 +10,43 @@ type Props = {
 const TablesWidget10: FC<Props> = ({ className }) => {
   return (
     <div className={`card ${className}`}>
-      {/* begin::Header */}
-      <div className="card-header border-0 pt-5">
-        <Dropdown1 />
+      <div className="m-0">
+        <div
+          className="mb-10"
+          style={{
+            display: "flex",
+            justifyContent: "right",
+            marginRight: 40,
+            marginTop: 20,
+          }}
+        >
+          <div style={{ maxWidth: 150 }}>
+            <select
+              className="form-select form-select-solid"
+              data-kt-select2="true"
+              data-placeholder="Select option"
+              data-allow-clear="true"
+              defaultValue={"1"}
+            >
+              <option></option>
+              <option value="1">Approved</option>
+              <option value="2">Pending</option>
+              <option value="3">In Process</option>
+              <option value="4">Rejected</option>
+            </select>
+          </div>
+        </div>
       </div>
+
+      {/* begin::Header */}
+
       {/* end::Header */}
       {/* begin::Body */}
       <div className="card-body py-3">
         {/* begin::Table container */}
         <div className="table-responsive">
           {/* begin::Table */}
+
           <table className="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4">
             {/* begin::Table head */}
             <thead>
