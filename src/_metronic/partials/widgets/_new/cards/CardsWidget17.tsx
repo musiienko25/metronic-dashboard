@@ -48,6 +48,7 @@ const CardsWidget17: FC<Props> = ({
             Projects Earnings in April
           </span>
         </div>
+        <div className="cardWidget_footer"></div>
       </div>
     </div>
   );
